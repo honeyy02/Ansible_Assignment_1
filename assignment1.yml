@@ -13,5 +13,5 @@
         mode: '0755'
 
     - name: Execute the Python script on the remote node
-      command: python3 python.py
+      command: python3 python_jenkins.py
 
