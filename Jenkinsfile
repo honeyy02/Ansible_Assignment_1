@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        ansible-playbook ${ANSIBLE_PLAYBOOK} -i ${ANSIBLE_INVENTORY} --vault-password-file ${ANSIBLE_VAULT_PASSWORD_FILE}
+                        ansible-playbook ${ANSIBLE_PLAYBOOK} -i ${ANSIBLE_INVENTORY} --private-key=/home/vagrant/.ssh/id_rsa --vault-password-file ${ANSIBLE_VAULT_PASSWORD_FILE}
                     """
                 }
             }
