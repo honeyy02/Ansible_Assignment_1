@@ -8,8 +8,8 @@
   tasks:
     - name: Copy Python file to the remote node
       copy:
-        src: python.py
-        dest: /tmp/python_jenkins.py
+        src: python_jenkins.py
+        dest:  /home/ansiblenode
         mode: '0755'
 
     - name: Execute the Python script on the remote node
