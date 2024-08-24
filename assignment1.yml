@@ -9,7 +9,7 @@
     - name: Copy Python file to the remote node
       copy:
         src: python.py
-        dest: /home/ansiblenode
+        dest: /tmp/python_jenkins.yml
         mode: '0755'
 
     - name: Execute the Python script on the remote node
