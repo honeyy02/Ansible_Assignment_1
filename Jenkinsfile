@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         ANSIBLE_INVENTORY = "/etc/ansible/hosts"
-        ANSIBLE_PLAYBOOK = "assignment1.yml"
+        ANSIBLE_PLAYBOOK = "/etc/ansible/playbook/assignment1.yml"
         ANSIBLE_VAULT_PASSWORD_FILE = "/etc/ansible/vault_pass.txt"
     }
 
