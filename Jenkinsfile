@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     
     environment {
         ANSIBLE_INVENTORY = "/etc/ansible/hosts"
@@ -10,6 +10,7 @@ pipeline {
     stages {
     
         stage('Run Ansible Playbook') {
+            agent { label 'master' }
             steps {
                 script {
                     sh """
