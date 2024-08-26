@@ -1,6 +1,6 @@
 ---
 - name: Deploy and Run Python Application
-  hosts: all
+  hosts: ansible_node
   become: yes
   become_method: sudo
   vars_files:
