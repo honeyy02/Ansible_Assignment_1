@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     
     environment {
         ANSIBLE_INVENTORY = "/etc/ansible/hosts"
