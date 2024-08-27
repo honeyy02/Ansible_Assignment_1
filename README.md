@@ -43,17 +43,16 @@ Keep your jenkins machine as ansible server machine keep jenkins node as ansible
 
 -**Ansible Assignment 1: (CI/CD):**
 
-**A. CI/CD Integration**:
-     -* Agent Node Configuration*:
-            - On the agent node, create a user specifically for the Jenkins agent.
-            - Configure the Jenkins agent with SSH credentials, using the following details:
-            - Username: username (the user created on the agent node i.e. `ansiblenode`)
-            - Private Key: The SSH private key from the remote server. `cat ~/.ssh/id_rsa`
-            - Playbook Configuration: In your Ansible playbook, specify the host as ansible_node (which corresponds to the agent node label).
-            
- **B. Manage SSH Credentials**:
-  - * Copy and Set Permissions*:
-            - Copy the SSH private key to Jenkins's directory and adjust permissions:
-            `sudo cp /home/vagrant/.ssh/id_rsa /var/lib/jenkins/.ssh/id_rsa
-            sudo chown jenkins:jenkins /var/lib/jenkins/.ssh/id_rsa
-            sudo chmod 600 /var/lib/jenkins/.ssh/id_rsa`
+- **CI/CD Integration**:
+    - Agent Node Configuration:
+        - On the agent node, create a user specifically for the Jenkins agent.
+        - Configure the Jenkins agent with SSH credentials, using the following details:
+        - Username: username (the user created on the agent node i.e. `ansiblenode`)
+        - Private Key: The SSH private key from the remote server. `cat ~/.ssh/id_rsa`
+        - Playbook Configuration: In your Ansible playbook, specify the host as ansible_node (which corresponds to the agent node label).
+- **Manage SSH Credentials**:
+    - Copy and Set Permissions:
+        - Copy the SSH private key to Jenkins's directory and adjust permissions:
+        `sudo cp /home/vagrant/.ssh/id_rsa /var/lib/jenkins/.ssh/id_rsa
+        sudo chown jenkins:jenkins /var/lib/jenkins/.ssh/id_rsa
+        sudo chmod 600 /var/lib/jenkins/.ssh/id_rsa`
