@@ -14,7 +14,6 @@ pipeline {
             steps {
                 script {
                     sh """
-                        sudo chmod 600 /home/vagrant/.ssh/id_rsa
                         ansible-playbook ${ANSIBLE_PLAYBOOK} -i ${ANSIBLE_INVENTORY} --private-key=/home/vagrant/.ssh/id_rsa --vault-password-file ${ANSIBLE_VAULT_PASSWORD_FILE}
                     """
                 }
